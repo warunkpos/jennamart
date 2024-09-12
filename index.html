@@ -7,22 +7,199 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    <style>
+        .example-content {
+            padding: 14px;
+            height: 85vh;
+            overflow-x: scroll;
+        }
+
+        .custom-card {
+            margin: 8px;
+        }
+    </style>
 </head>
 
 <body>
-    <ion-header>
-        <ion-toolbar>
-            <ion-title>Header</ion-title>
-        </ion-toolbar>
-    </ion-header>
-    <ion-content class="ion-padding">
-        <h1>Content</h1>
-    </ion-content>
+    <ion-tabs>
+        <ion-tab tab="master">
+            <ion-nav id="master-nav"></ion-nav>
+            <div id="master-page">
+                <ion-header>
+                    <ion-toolbar>
+                        <ion-title>Warunk</ion-title>
+                    </ion-toolbar>
+                </ion-header>
+                <div class="example-content">
+                    <h4>Submit Product</h4>
+                    <br>
+                    <form id="formSubmit">
+                        <ion-input id="pluname" label="PLU Name" type="text" label-placement="floating" fill="outline"
+                            placeholder="Enter PLU Name" required></ion-input>
+                        <br>
+                        <ion-input id="price" label="Price" type="number" label-placement="floating" fill="outline"
+                            placeholder="Enter Price" required></ion-input>
+                        <br>
+                        <!-- <ion-input id="image" label="Image" type="file"></ion-input> -->
+                        <ion-button id="submit" expand="block" class="ion-padding-vertical">Submit</ion-button>
+                    </form>
+                    <ion-toast trigger="open-toast" message="This toast will disappear after 5 seconds" duration="5000"></ion-toast>
+                </div>
+            </div>
+        </ion-tab>
+        <ion-tab tab="product">
+            <ion-nav id="product-nav"></ion-nav>
+            <div id="product-page">
+                <ion-header>
+                    <ion-toolbar>
+                        <ion-title>Warunk</ion-title>
+                    </ion-toolbar>
+                </ion-header>
+                <div class="example-content">
+                    <ion-grid class="ion-no-padding">
+                        <ion-row>
+                            <ion-col class="ion-no-padding">
+                                <ion-card class="custom-card">
+                                    <img alt="Silhouette of mountains"
+                                        src="https://ionicframework.com/docs/img/demos/card-media.png" />
+                                    <ion-card-header>
+                                        <ion-card-title>Card Title</ion-card-title>
+                                        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                                    </ion-card-header>
+
+                                    <ion-card-content>
+                                        Here's a small text description for the card content. Nothing more, nothing
+                                        less.
+                                    </ion-card-content>
+                                </ion-card>
+                            </ion-col>
+                            <ion-col class="ion-no-padding">
+                                <ion-card class="custom-card">
+                                    <img alt="Silhouette of mountains"
+                                        src="https://ionicframework.com/docs/img/demos/card-media.png" />
+                                    <ion-card-header>
+                                        <ion-card-title>Card Title</ion-card-title>
+                                        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                                    </ion-card-header>
+
+                                    <ion-card-content>
+                                        Here's a small text description for the card content. Nothing more, nothing
+                                        less.
+                                    </ion-card-content>
+                                </ion-card>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col class="ion-no-padding">
+                                <ion-card class="custom-card">
+                                    <img alt="Silhouette of mountains"
+                                        src="https://ionicframework.com/docs/img/demos/card-media.png" />
+                                    <ion-card-header>
+                                        <ion-card-title>Card Title</ion-card-title>
+                                        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                                    </ion-card-header>
+
+                                    <ion-card-content>
+                                        Here's a small text description for the card content. Nothing more, nothing
+                                        less.
+                                    </ion-card-content>
+                                </ion-card>
+                            </ion-col>
+                            <ion-col class="ion-no-padding">
+                                <ion-card class="custom-card">
+                                    <img alt="Silhouette of mountains"
+                                        src="https://ionicframework.com/docs/img/demos/card-media.png" />
+                                    <ion-card-header>
+                                        <ion-card-title>Card Title</ion-card-title>
+                                        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                                    </ion-card-header>
+
+                                    <ion-card-content>
+                                        Here's a small text description for the card content. Nothing more, nothing
+                                        less.
+                                    </ion-card-content>
+                                </ion-card>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col class="ion-no-padding">
+                                <ion-card class="custom-card">
+                                    <img alt="Silhouette of mountains"
+                                        src="https://ionicframework.com/docs/img/demos/card-media.png" />
+                                    <ion-card-header>
+                                        <ion-card-title>Card Title</ion-card-title>
+                                        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                                    </ion-card-header>
+
+                                    <ion-card-content>
+                                        Here's a small text description for the card content. Nothing more, nothing
+                                        less.
+                                    </ion-card-content>
+                                </ion-card>
+                            </ion-col>
+                            <ion-col class="ion-no-padding">
+                                <ion-card class="custom-card">
+                                    <img alt="Silhouette of mountains"
+                                        src="https://ionicframework.com/docs/img/demos/card-media.png" />
+                                    <ion-card-header>
+                                        <ion-card-title>Card Title</ion-card-title>
+                                        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                                    </ion-card-header>
+
+                                    <ion-card-content>
+                                        Here's a small text description for the card content. Nothing more, nothing
+                                        less.
+                                    </ion-card-content>
+                                </ion-card>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </div>
+            </div>
+        </ion-tab>
+
+        <ion-tab-bar slot="bottom">
+            <ion-tab-button tab="master">
+                <ion-icon name="cube-outline"></ion-icon>
+                Master
+            </ion-tab-button>
+            <ion-tab-button tab="product">
+                <ion-icon name="stats-chart-outline"></ion-icon>
+                Product
+            </ion-tab-button>
+        </ion-tab-bar>
+    </ion-tabs>
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js"></script>
+    <script>
+        const form = document.getElementById('formSubmit');
+        const pluname = document.getElementById('pluname');
+        const price = document.getElementById('price');
+        const submitBtn = document.getElementById('submit');
+
+        submitBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            if (pluname.value === "") {
+                var toast = document.querySelector('ion-toast');
+                toast.addEventListener('didDismiss', () => {
+                    toast.isOpen = false;
+                });
+            } else if (price.value === "") {
+
+            } else {
+                const formData = {
+                    username: pluname.value,
+                    password: price.value,
+                };
+                // Form submission logic goes here
+                console.log(formData);
+            }
+        });
+    </script>
 </body>
 
 </html>
