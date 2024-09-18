@@ -1,0 +1,18 @@
+.example-content {
+    padding: 14px;
+    height: 85vh;
+    overflow-x: scroll;
+}
+
+.custom-card {
+    margin: 8px;
+}
+
+.relative{
+    position: relative;
+}
+.ion-btn-card{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
