@@ -5,39 +5,6 @@ function setCookie(cname, cvalue) {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-const form = document.getElementById('formSubmit');
-const pluname = document.getElementById('pluname');
-const price = document.getElementById('price');
-const submitBtn = document.getElementById('submit');
-
-submitBtn.addEventListener('click', (e) => {
-
-    e.preventDefault();
-    document.cookie = "username=Max Brown";
-    localStorage.setItem("lastname", "Smith");
-    var toast = document.getElementById("errorSubmit");
-    if (pluname.value === "") {
-        toast.isOpen = true;
-        toast.message = "Plu Number is Required"
-    } else if (price.value === "") {
-        toast.isOpen = true;
-        toast.message = "Price is Required"
-
-    } else {
-        const formData = {
-            username: pluname.value,
-            password: price.value,
-        };
-        // Form submission logic goes here
-        console.log(formData);
-        document.cookie = "products" + "=" + formData;
-        // setCookie("products", formData)
-    }
-    setTimeout(() => {
-        toast.isOpen = false;
-    }, 2000);
-});
-
 
 ///list products------------------
 const products = [{
@@ -63,23 +30,33 @@ const products = [{
 }]
 
 function appendListProducts(data) {
-    for (var i = 0; i <= data.length; i++) {
+    for (var i = 0; i < data.length; i++) {
         var dataHtml = `
         <ion-col class="ion-no-padding"  size-sm="6">
             <ion-card class="custom-card">
                 <img alt="Silhouette of mountains"
                     src="https://ionicframework.com/docs/img/demos/card-media.png" />
                 <ion-card-header>
-                    <ion-card-title>`+data[i].pluname+`</ion-card-title>
-                    <ion-card-subtitle>`+data[i].price+`</ion-card-subtitle>
+                    <ion-card-title>`+ data[i].pluname + `</ion-card-title>
+                    <ion-card-subtitle>`+ data[i].price + `</ion-card-subtitle>
                 </ion-card-header> 
-                <ion-button class="ion-btn-card">Add</ion-button>
+                <ion-button expand="block" id="openQty" class="ion-btn-card ion-no-padding" onclick="addToCart(`+ data[i].id + `)">Add</ion-button>
             </ion-card>
         </ion-col> `;
         $('#listProducts').append(dataHtml)
     }
 }
 appendListProducts(products);
+
+function addToCart(id) {
+    const data = products.filter((i) => i.id === id)[0];
+    // const modal = document.getElementById('openQty');
+
+    // modal.initialBreakpoint = 1;
+    // modal.breakpoints = [0, 1];
+
+
+}
 
 const searchbar = document.querySelector('ion-searchbar');
 const items = Array.from(document.getElementById('listProducts').children);
@@ -93,3 +70,18 @@ function handleInput(event) {
         });
     });
 }
+
+// ----------
+
+var modalCart = document.getElementById('modalCart');
+
+function closeCart() {
+    console.log('close');
+    
+    modalCart.dismiss();
+}
+
+function printCart() {
+    ///print
+}
+

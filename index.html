@@ -11,60 +11,58 @@
 </head>
 
 <body>
-    <ion-tabs>
-        <ion-tab tab="master">
-            <ion-nav id="master-nav"></ion-nav>
-            <div id="master-page">
-                <ion-header>
-                    <ion-toolbar>
-                        <ion-title>Warunk</ion-title>
-                    </ion-toolbar>
-                </ion-header>
-                <div class="example-content">
-                    <h4>Submit Product</h4>
-                    <br>
-                    <form id="formSubmit">
-                        <ion-input id="pluname" label="PLU Name" type="text" label-placement="floating" fill="outline"
-                            placeholder="Enter PLU Name" required></ion-input>
-                        <br>
-                        <ion-input id="price" label="Price" type="number" label-placement="floating" fill="outline"
-                            placeholder="Enter Price" required></ion-input>
-                        <br>
-                        <!-- <ion-input id="image" label="Image" type="file"></ion-input> -->
-                        <ion-button id="submit" expand="block" class="ion-padding-vertical">Submit</ion-button>
-                    </form>
-                    <ion-toast id="errorSubmit" color="danger"></ion-toast>
-                </div>
+    <div id="product-page">
+        <ion-header>
+            <ion-toolbar>
+                <ion-title>Warunk</ion-title>
+            </ion-toolbar>
+            <ion-icon name="cart-outline" size="large" class="ion-cart" id="openCart"></ion-icon>
+            <ion-badge color="primary" class="ion-badge-cart">22</ion-badge>
+        </ion-header>
+        <div class="example-content">
+            <ion-searchbar debounce="1000"></ion-searchbar>
+            <ion-grid class="ion-no-padding relative">
+                <ion-row id="listProducts"> </ion-row>
+            </ion-grid>
+        </div>
+        <ion-modal id="example-modal" trigger="openQty">
+            <div class="wrapper">
+              <h1>Dialog header</h1>
+        
             </div>
-        </ion-tab>
-        <ion-tab tab="product">
-            <ion-nav id="product-nav"></ion-nav>
-            <div id="product-page">
-                <ion-header>
-                    <ion-toolbar>
-                        <ion-title>Warunk</ion-title>
-                    </ion-toolbar>
-                </ion-header>
-                <div class="example-content">
-                    <ion-searchbar debounce="1000"></ion-searchbar>
-                    <ion-grid class="ion-no-padding relative">
-                        <ion-row id="listProducts"> </ion-row>
-                    </ion-grid>
-                </div>
-            </div>
-        </ion-tab>
+          </ion-modal>
 
-        <ion-tab-bar slot="bottom">
-            <ion-tab-button tab="master">
-                <ion-icon name="cube-outline"></ion-icon>
-                Master
-            </ion-tab-button>
-            <ion-tab-button tab="product">
-                <ion-icon name="stats-chart-outline"></ion-icon>
-                Product
-            </ion-tab-button>
-        </ion-tab-bar>
-    </ion-tabs>
+        <ion-modal trigger="openCart" id="modalCart">
+            <ion-header>
+                <ion-toolbar>
+                    <ion-buttons slot="start">
+                        <ion-button onclick="closeCart()"><ion-icon name="arrow-back-sharp"></ion-icon></ion-button>
+                    </ion-buttons>
+                    <ion-title class="ion-text-center">Welcome</ion-title>
+                    <ion-buttons slot="end">
+                        <ion-button onclick="printCart()" strong="true"><ion-icon
+                                name="print-sharp"></ion-icon></ion-button>
+                    </ion-buttons>
+                </ion-toolbar>
+            </ion-header>
+            <ion-content class="ion-padding">
+                <ion-list>
+                    <ion-item-sliding>
+                        <ion-item>
+                            <ion-label>Masako</ion-label>
+                            <ion-badge color="primary" class="mr-20">22</ion-badge>
+                            <p>Rp. 4.000</p>
+                        </ion-item>
+
+                        <ion-item-options>
+                            <ion-item-option color="danger"><ion-icon name="trash-outline"></ion-icon></ion-item-option>
+                        </ion-item-options>
+                    </ion-item-sliding>
+                </ion-list>
+            </ion-content>
+        </ion-modal>
+    </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
