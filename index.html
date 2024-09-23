@@ -25,12 +25,30 @@
                 <ion-row id="listProducts"> </ion-row>
             </ion-grid>
         </div>
-        <ion-modal id="example-modal" trigger="openQty">
+        <ion-modal id="openQty">
+            <ion-header>
+                <ion-toolbar>
+                    <ion-buttons slot="end">
+                        <ion-button onclick="closeCart()"><ion-icon name="close-sharp"></ion-icon></ion-button>
+                    </ion-buttons>
+                    <ion-title class="ion-text-center">Add To Cart</ion-title>
+                </ion-toolbar>
+            </ion-header>
             <div class="wrapper">
-              <h1>Dialog header</h1>
-        
+                <div class="counter__section">
+                    <ion-button id="decrement"  onclick="decrement()">
+                        <ion-icon name="remove-outline"></ion-icon>
+                    </ion-button>
+                    <p id="counter">0</p>
+                    <ion-button id="increment" onclick="increment()">
+                        <ion-icon name="add-outline"></ion-icon>
+                    </ion-button>
+                </div>
+                <ion-button  expand="block">
+                    <ion-icon name="cart-outline"></ion-icon> Add
+                </ion-button>
             </div>
-          </ion-modal>
+        </ion-modal>
 
         <ion-modal trigger="openCart" id="modalCart">
             <ion-header>

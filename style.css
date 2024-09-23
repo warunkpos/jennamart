@@ -1,61 +1,89 @@
 .example-content {
-    padding: 14px;
-    height: 90vh;
-    overflow-x: scroll;
+  padding: 14px;
+  height: 90vh;
+  overflow-x: scroll;
 }
 
 .custom-card {
-    margin: 8px;
+  margin: 8px;
 }
 
 .relative {
-    position: relative;
+  position: relative;
 }
 
 .ion-cart {
-    position: absolute;
-    right: 10px;
-    top: 12px;
-    z-index: 99;
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  z-index: 99;
 }
 
 .ion-badge-cart {
-    position: absolute;
-    right: 10px;
-    top: 12px;
-    z-index: 99;
-    font-size: 9px;
-    padding: 5px;
-    border-radius: 100px;
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  z-index: 99;
+  font-size: 9px;
+  padding: 5px;
+  border-radius: 100px;
 }
 
 .mr-20 {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
-ion-modal#example-modal {
-    --width: fit-content;
-    --min-width: 250px;
-    --height: fit-content;
-    --border-radius: 6px;
-    --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
-  }
+ion-modal#openQty {
+  --width: fit-content;
+  --min-width: 85%;
+  --height: fit-content;
+  --border-radius: 6px;
+  --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+}
 
-  ion-modal#example-modal h1 {
-    margin: 20px 20px 10px 20px;
-  }
+ion-modal#openQty h1 {
+  margin: 20px 20px 10px 20px;
+}
 
-  ion-modal#example-modal ion-icon {
-    margin-right: 6px;
+ion-modal#openQty ion-icon {
+  margin-right: 6px;
 
-    width: 48px;
-    height: 48px;
+  width: 48px;
+  height: 48px;
 
-    padding: 4px 0;
+  padding: 4px 0;
 
-    color: #aaaaaa;
-  }
+  color: #aaaaaa;
+}
 
-  ion-modal#example-modal .wrapper {
-    margin-bottom: 10px;
-  }
+ion-modal#openQty .wrapper {
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+ion-modal#openQty ion-icon {
+  width: 20px;
+  height: 20px;
+  color: #000000;
+  margin: 0;
+}
+
+ion-modal#openQty .counter__section ion-icon {
+  color: white !important;
+}
+
+.counter__section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ 
+#counter {
+  background: #0154ea;
+  color: white;
+  display: block;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  font-size: 28px;
+}

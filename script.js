@@ -40,7 +40,7 @@ function appendListProducts(data) {
                     <ion-card-title>`+ data[i].pluname + `</ion-card-title>
                     <ion-card-subtitle>`+ data[i].price + `</ion-card-subtitle>
                 </ion-card-header> 
-                <ion-button expand="block" id="openQty" class="ion-btn-card ion-no-padding" onclick="addToCart(`+ data[i].id + `)">Add</ion-button>
+                <ion-button expand="block" class="ion-btn-card ion-no-padding" onclick="addToCart(`+ data[i].id + `)">Add</ion-button>
             </ion-card>
         </ion-col> `;
         $('#listProducts').append(dataHtml)
@@ -48,14 +48,26 @@ function appendListProducts(data) {
 }
 appendListProducts(products);
 
+const modal = document.getElementById('openQty');
 function addToCart(id) {
+    console.log('open-----')
     const data = products.filter((i) => i.id === id)[0];
-    // const modal = document.getElementById('openQty');
-
-    // modal.initialBreakpoint = 1;
-    // modal.breakpoints = [0, 1];
+    modal.isOpen = true; 
 
 
+}
+
+const counter = document.querySelector('#counter');
+function increment() {
+    
+    counter.innerHTML = parseInt(counter.innerText) + 1;
+}
+
+function decrement() {
+    console.log(parseInt(counter.innerText));
+    if (parseInt(counter.innerText) > 0) {
+        counter.innerHTML = parseInt(counter.innerText) - 1;
+    }
 }
 
 const searchbar = document.querySelector('ion-searchbar');
@@ -77,8 +89,9 @@ var modalCart = document.getElementById('modalCart');
 
 function closeCart() {
     console.log('close');
-    
+
     modalCart.dismiss();
+    modal.isOpen = false;
 }
 
 function printCart() {
