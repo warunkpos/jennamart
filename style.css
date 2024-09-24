@@ -87,3 +87,12 @@ ion-modal#openQty .counter__section ion-icon {
   text-align: center;
   font-size: 28px;
 }
+
+ion-button {
+  --background: linear-gradient(90deg, #ff9c15, #ff526f, #ff23ad) !important;
+  font-weight: bold !important;
+  color: white !important;
+}
+.button-native {
+  color: #ffffff !important;
+}

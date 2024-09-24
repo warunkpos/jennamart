@@ -4,19 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jennamart</title>
+    <link rel="icon" type="image/x-icon" href="./favico.png">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
     <link rel="stylesheet" href="style.css">
+    <style type="text/css" media="print">
+        .no-print { display: none; }
+     </style>
 </head>
 
 <body>
     <div id="product-page">
         <ion-header>
             <ion-toolbar>
-                <ion-title>Warunk</ion-title>
+                <img src="./brand.png" alt="" width="200px">
             </ion-toolbar>
-            <ion-icon name="cart-outline" size="large" class="ion-cart" id="openCart"></ion-icon>
+            <ion-icon name="cart-outline" size="large" class="ion-cart" id="openCart" onclick="openListCart()"></ion-icon>
             <ion-badge color="primary" class="ion-badge-cart" id="badgeCart"></ion-badge>
         </ion-header>
         <div class="example-content">
@@ -39,46 +43,34 @@
                 <div id="price"></div>
                 <div class="counter__section">
                     <ion-button id="decrement"  onclick="decrement()">
-                        <ion-icon name="remove-outline"></ion-icon>
+                        <ion-icon name="remove-outline" ></ion-icon>
                     </ion-button>
                     <p id="counter">1</p>
                     <ion-button id="increment" onclick="increment()">
                         <ion-icon name="add-outline"></ion-icon>
                     </ion-button>
                 </div>
-                <ion-button  expand="block" onclick="addCart()">
-                    <ion-icon name="cart-outline"></ion-icon> Add
+                <ion-button  expand="block" onclick="addCart()" style="color:white;">
+                    <ion-icon name="cart-outline" color="light"></ion-icon> Add
                 </ion-button>
             </div>
         </ion-modal>
 
         <ion-modal trigger="openCart" id="modalCart">
-            <ion-header>
+            <ion-header class="no-print">
                 <ion-toolbar>
                     <ion-buttons slot="start">
-                        <ion-button onclick="closeCart()"><ion-icon name="arrow-back-sharp"></ion-icon></ion-button>
+                        <ion-button onclick="closeCart()" ><ion-icon color="light" name="arrow-back-sharp"></ion-icon></ion-button>
                     </ion-buttons>
-                    <ion-title class="ion-text-center">Welcome</ion-title>
+                    <ion-title class="ion-text-center">Jennamart</ion-title>
                     <ion-buttons slot="end">
-                        <ion-button onclick="printCart()" strong="true"><ion-icon
-                                name="print-sharp"></ion-icon></ion-button>
+                        <ion-button onclick="printCart()" strong="true"><ion-icon color="light" name="print-sharp"></ion-icon></ion-button>
                     </ion-buttons>
                 </ion-toolbar>
             </ion-header>
-            <ion-content class="ion-padding">
-                <ion-list>
-                    <ion-item-sliding>
-                        <ion-item>
-                            <ion-label>Masako</ion-label>
-                            <ion-badge color="primary" class="mr-20">22</ion-badge>
-                            <p>Rp. 4.000</p>
-                        </ion-item>
-
-                        <ion-item-options>
-                            <ion-item-option color="danger"><ion-icon name="trash-outline"></ion-icon></ion-item-option>
-                        </ion-item-options>
-                    </ion-item-sliding>
-                </ion-list>
+            <ion-content class="ion-padding" id="printView">
+                <ion-list id="listCart"> </ion-list>
+                <ion-list id="grandTotal" style="font-weight: bold;"> </ion-list>
             </ion-content>
         </ion-modal>
     </div>

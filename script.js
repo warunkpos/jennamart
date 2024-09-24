@@ -52,15 +52,14 @@ const modal = document.getElementById('openQty');
 let dataProduct = ''
 function addToCart(id) {
     dataProduct = products.filter((i) => i.id === id)[0];
-    modal.isOpen = true; 
+    modal.isOpen = true;
     counter.innerHTML = 1;
     document.getElementById('pluname').innerHTML = dataProduct.pluname;
-    document.getElementById('price').innerHTML = 'Rp. ' +Number(dataProduct.price).toLocaleString('id-ID')
+    document.getElementById('price').innerHTML = 'Rp. ' + Number(dataProduct.price).toLocaleString('id-ID')
 }
 
 const counter = document.querySelector('#counter');
 function increment() {
-    
     counter.innerHTML = parseInt(counter.innerText) + 1;
 }
 
@@ -71,7 +70,10 @@ function decrement() {
 }
 
 const cartitem = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
-document.getElementById('badgeCart').innerHTML = cartitem.length;
+setInterval(() => {
+    document.getElementById('badgeCart').innerHTML = cartitem.length;
+}, 1000);
+
 function addCart() {
     dataProduct.qty = parseInt(counter.innerText);
     let index = cartitem.findIndex((cartItem) => cartItem.id === dataProduct.id);
@@ -85,7 +87,8 @@ function addCart() {
         cartitem.push(dataProduct)
     }
     console.log(cartitem);
-    localStorage.setItem('cart',  JSON.stringify(cartitem))
+    localStorage.setItem('cart', JSON.stringify(cartitem))
+    modal.isOpen = false;
 }
 
 const searchbar = document.querySelector('ion-searchbar');
@@ -113,6 +116,42 @@ function closeCart() {
 }
 
 function printCart() {
-    ///print
+    const element = document.getElementById('printView');
+    window.print();
+}
+function openListCart() {
+    $('#listCart').html('');
+    $('#grandTotal').html('');
+
+    appendListCart(cartitem);
 }
 
+
+function appendListCart(data) {
+    let total = 0;
+    for (var i = 0; i < data.length; i++) {
+        var dataHtml = `
+            <ion-item-sliding>
+                <ion-item>
+                    <ion-label>`+ data[i].pluname + ` (Rp.`+ Number(data[i].price).toLocaleString('id-ID') + ` )</ion-label>
+                    <ion-badge color="primary" class="mr-20">`+ data[i].qty + `</ion-badge>
+                    <p> Rp. `+ Number(data[i].qty*data[i].price).toLocaleString('id-ID') + `</p>
+                </ion-item>
+                <ion-item-options>
+                    <ion-item-option color="danger"><ion-icon name="trash-outline"></ion-icon></ion-item-option>
+                </ion-item-options>
+            </ion-item-sliding>`;
+        $('#listCart').append(dataHtml);
+        total = total + (data[i].qty*data[i].price);
+    }
+    if (total > 0) {
+        var dataHtml = `
+                    <ion-item>
+                        <ion-label>Total</ion-label>
+                        <p> Rp. `+ Number(total).toLocaleString('id-ID') + `</p>
+                    </ion-item> `;
+            $('#grandTotal').append(dataHtml);
+    }
+    console.log(total);
+    
+}
