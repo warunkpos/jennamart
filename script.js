@@ -49,12 +49,13 @@ function appendListProducts(data) {
 appendListProducts(products);
 
 const modal = document.getElementById('openQty');
+let dataProduct = ''
 function addToCart(id) {
-    console.log('open-----')
-    const data = products.filter((i) => i.id === id)[0];
+    dataProduct = products.filter((i) => i.id === id)[0];
     modal.isOpen = true; 
-
-
+    counter.innerHTML = 1;
+    document.getElementById('pluname').innerHTML = dataProduct.pluname;
+    document.getElementById('price').innerHTML = 'Rp. ' +Number(dataProduct.price).toLocaleString('id-ID')
 }
 
 const counter = document.querySelector('#counter');
@@ -64,10 +65,26 @@ function increment() {
 }
 
 function decrement() {
-    console.log(parseInt(counter.innerText));
-    if (parseInt(counter.innerText) > 0) {
+    if (parseInt(counter.innerText) > 1) {
         counter.innerHTML = parseInt(counter.innerText) - 1;
     }
+}
+
+function addCart() {
+    dataProduct.qty = parseInt(counter.innerText);
+    const cartitem = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+    let index = cartitem.findIndex((cartItem) => cartItem.id === dataProduct.id);
+    if (cartitem.length > 0) {
+        if (index !== -1) {
+            cartitem[index].qty = cartitem[index].qty + dataProduct.qty
+        } else {
+            cartitem.push(dataProduct)
+        }
+    } else {
+        cartitem.push(dataProduct)
+    }
+    console.log(cartitem);
+    localStorage.setItem('cart',  JSON.stringify(cartitem))
 }
 
 const searchbar = document.querySelector('ion-searchbar');

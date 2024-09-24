@@ -35,16 +35,18 @@
                 </ion-toolbar>
             </ion-header>
             <div class="wrapper">
+                <h4 id="pluname"></h4>
+                <div id="price"></div>
                 <div class="counter__section">
                     <ion-button id="decrement"  onclick="decrement()">
                         <ion-icon name="remove-outline"></ion-icon>
                     </ion-button>
-                    <p id="counter">0</p>
+                    <p id="counter">1</p>
                     <ion-button id="increment" onclick="increment()">
                         <ion-icon name="add-outline"></ion-icon>
                     </ion-button>
                 </div>
-                <ion-button  expand="block">
+                <ion-button  expand="block" onclick="addCart()">
                     <ion-icon name="cart-outline"></ion-icon> Add
                 </ion-button>
             </div>
