@@ -70,9 +70,10 @@ function decrement() {
     }
 }
 
+const cartitem = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+document.getElementById('badgeCart').innerHTML = cartitem.length;
 function addCart() {
     dataProduct.qty = parseInt(counter.innerText);
-    const cartitem = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
     let index = cartitem.findIndex((cartItem) => cartItem.id === dataProduct.id);
     if (cartitem.length > 0) {
         if (index !== -1) {
