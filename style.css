@@ -96,3 +96,15 @@ ion-button {
 .button-native {
   color: #ffffff !important;
 }
+ion-card-subtitle{
+  --color: black;
+  font-size: 14px;
+}
+
+.badge-qty{
+  background: linear-gradient(90deg, #ff9c15, #ff526f, #ff23ad) !important;
+  padding: 6px 8px;
+  border-radius: 100px;
+  width: 26px;
+  height: 26px;
+}

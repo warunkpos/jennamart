@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jennamart</title>
     <link rel="icon" type="image/x-icon" href="./favico.png">
-
+    <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
     <link rel="stylesheet" href="style.css">
     <style type="text/css" media="print">
@@ -64,6 +64,9 @@
                     </ion-buttons>
                     <ion-title class="ion-text-center">Jennamart</ion-title>
                     <ion-buttons slot="end">
+                        <ion-button onclick="clearCart()" strong="true"><ion-icon color="light" name="trash-bin"></ion-icon></ion-button>
+                    </ion-buttons>
+                    <ion-buttons slot="end">
                         <ion-button onclick="printCart()" strong="true"><ion-icon color="light" name="print-sharp"></ion-icon></ion-button>
                     </ion-buttons>
                 </ion-toolbar>
@@ -74,7 +77,21 @@
             </ion-content>
         </ion-modal>
     </div>
-
+    <!-- <div id="receipt-content" style="display: none;">
+        <table>
+          <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>Apple</td>
+            <td>2</td>
+            <td>$5.00</td>
+          </tr>
+        </table>
+      </div>
+      <button onclick="printReceipt()">Print Receipt</button> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
@@ -82,6 +99,17 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js"></script>
     <script src="script.js"></script>
+    <!-- <script>
+function printReceipt() {
+  const receiptContent = document.getElementById("receipt-content");
+  const printWindow = window.open("", "Print Receipt", "width=800,height=600");
+  printWindow.document.write(receiptContent.innerHTML);
+  printWindow.document.close();
+  printWindow.focus();
+  printWindow.print();
+  printWindow.close();
+}
+    </script> -->
 </body>
 
 </html>
