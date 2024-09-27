@@ -68,6 +68,22 @@ const products = [
         "id": 15,
         "pluname": "Detergen Bubuk Renceng",
         "price": 4500
+    }, {
+        "id": 16,
+        "pluname": "Neo Coffee",
+        "price": 8000
+    }, {
+        "id": 17,
+        "pluname": "Kapal Api",
+        "price": 15000
+    }, {
+        "id": 18,
+        "pluname": "Energen",
+        "price": 8000
+    }, {
+        "id": 19,
+        "pluname": "Bumbu Racik",
+        "price": 1500
     }
 ]
 
