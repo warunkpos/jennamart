@@ -36,7 +36,7 @@ const products = [
     }, {
         "id": 6,
         "pluname": "Minyak Sunco 2l",
-        "price": 33000,
+        "price": 33500,
         "img": "https://down-id.img.susercontent.com/file/sg-11134201-22110-sah56w6uldjv17"
     }, {
         "id": 7,
@@ -61,7 +61,7 @@ const products = [
     }, {
         "id": 11,
         "pluname": "Gula Kemasan",
-        "price": 15500,
+        "price": 16000,
         "img": "https://img.lazcdn.com/g/p/beab657a2527c0247c23d0a196c155d1.jpg_960x960q80.jpg_.webp"
     }, {
         "id": 12,
@@ -86,7 +86,7 @@ const products = [
     }, {
         "id": 16,
         "pluname": "Neo Coffee",
-        "price": 8000,
+        "price": 8500,
         "img": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/MTA-10643012/neo_coffee_neo_coffee_3in1_tiramisu_bag_10x20g_full01_c26nuc7b.jpeg"
     }, {
         "id": 17,
@@ -173,7 +173,7 @@ const products = [
     }, {
         "id": 34,
         "pluname": "Sunsilk 160ml",
-        "price": 14500
+        "price": 19500
     }, {
         "id": 35,
         "pluname": "Downy Renceng",
@@ -241,7 +241,7 @@ const products = [
     }, {
         "id": 51,
         "pluname": "Sunsilk 160ml",
-        "price": 20000
+        "price": 19500
     }, {
         "id": 52,
         "pluname": "Pepsodent 225gram",
