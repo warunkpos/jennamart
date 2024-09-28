@@ -79,7 +79,7 @@ ion-modal#openQty .counter__section ion-icon {
 }
  
 #counter {
-  background: #0154ea;
+  background:linear-gradient(90deg, #ff9c15, #ff526f, #ff23ad);
   color: white;
   display: block;
   padding: 10px;
@@ -107,4 +107,11 @@ ion-card-subtitle{
   border-radius: 100px;
   width: 26px;
   height: 26px;
+}
+
+ion-card-title{
+  font-size: 26px;
+}
+ion-card-header{
+  padding: 4px 14px;
 }

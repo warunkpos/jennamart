@@ -4,9 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Warunk POS untuk jual beli barang di toko Jennamart">
+    <meta name="keywords" content="Jennamart">
+    <meta name="author" content="Jennamart">
     <title>Jennamart</title>
-    <link rel="icon" type="image/x-icon" href="./favico.png">
-    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
     <link rel="stylesheet" href="style.css">
     <style type="text/css" media="print">
@@ -33,7 +36,7 @@
             <ion-header>
                 <ion-toolbar>
                     <ion-buttons slot="end">
-                        <ion-button onclick="closeCart()"><ion-icon name="close-sharp"></ion-icon></ion-button>
+                        <ion-button onclick="closeCart()"><ion-icon  color="light" name="close-sharp"></ion-icon></ion-button>
                     </ion-buttons>
                     <ion-title class="ion-text-center">Add To Cart</ion-title>
                 </ion-toolbar>
@@ -43,11 +46,11 @@
                 <div id="price"></div>
                 <div class="counter__section">
                     <ion-button id="decrement"  onclick="decrement()">
-                        <ion-icon name="remove-outline" ></ion-icon>
+                        <ion-icon name="remove-outline"  color="light" ></ion-icon>
                     </ion-button>
                     <p id="counter">1</p>
                     <ion-button id="increment" onclick="increment()">
-                        <ion-icon name="add-outline"></ion-icon>
+                        <ion-icon name="add-outline"  color="light"></ion-icon>
                     </ion-button>
                 </div>
                 <ion-button  expand="block" onclick="addCart()" style="color:white;">
