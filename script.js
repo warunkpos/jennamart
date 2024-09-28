@@ -350,12 +350,17 @@ var modalCart = document.getElementById('modalCart');
 
 function closeCart() {
     console.log('close');
-
+    $('#listCart').show();
+    $('#grandTotal').show();
+    $('#PrintInvoice').hide();
     modalCart.dismiss();
     modal.isOpen = false;
 }
 
 function printCart() {
+    $('#listCart').hide();
+    $('#grandTotal').hide();
+    $('#PrintInvoice').show();
     window.print();
 }
 
@@ -364,12 +369,15 @@ function clearCart() {
     localStorage.setItem('cart', []);
     $('#listCart').html('');
     $('#grandTotal').html('');
+    $('#grandTotalPrint').html('');
+    $('#listViewPrint').html(''); 
 }
 
 function openListCart() {
     $('#listCart').html('');
     $('#grandTotal').html('');
-
+    $('#grandTotalPrint').html('');
+    $('#listViewPrint').html('');
     appendListCart(cartitem);
 }
 
@@ -390,6 +398,20 @@ function appendListCart(data) {
             </ion-item-sliding>`;
         $('#listCart').append(dataHtml);
         total = total + (data[i].qty * data[i].price);
+
+        var dataview = `
+                <tr class="item">
+                    <td style="padding: 5px;vertical-align: top;border-bottom: 1px solid #eee;">
+                        `+ data[i].pluname + `
+                    </td>
+                    <td style="text-align: right;">`+ data[i].qty + `</td>
+                    <td
+                        style="padding: 5px;vertical-align: top;text-align: right;border-bottom: 1px solid #eee;">
+                        Rp. `+ Number(data[i].qty * data[i].price).toLocaleString('id-ID') + `
+                    </td>
+                </tr> `
+
+        $('#listViewPrint').append(dataview);
     }
     if (total > 0) {
         var dataHtml = `
@@ -397,7 +419,9 @@ function appendListCart(data) {
                         <ion-label>Total</ion-label>
                         <p> Rp. `+ Number(total).toLocaleString('id-ID') + `</p>
                     </ion-item> `;
-        $('#grandTotal').append(dataHtml);
+        $('#grandTotal').html(dataHtml);
+        var dataview =  'Rp. '+Number(total).toLocaleString('id-ID') 
+        $('#grandTotalPrint').html(dataview);
     }
     console.log(total);
 
@@ -410,7 +434,12 @@ function removeListById(id) {
         localStorage.setItem('cart', JSON.stringify(cartitem));
         $('#listCart').html('');
         $('#grandTotal').html('');
-
+        $('#grandTotalPrint').html('');
+        $('#listViewPrint').html('');
         appendListCart(cartitem);
     }
 }
+
+console.log(moment());
+const invoice = moment().format('hh/mm/DD/MM/YYYY')
+$('#invoice').html('JM'+invoice);

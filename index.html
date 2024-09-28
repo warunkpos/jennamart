@@ -9,12 +9,14 @@
     <meta name="author" content="Jennamart">
     <title>Jennamart</title>
     <link rel="icon" type="image/x-icon" href="./favicon.png">
-    <link rel="manifest" href="manifest.json" crossorigin="use-credentials" />
+    <link rel="manifest" href="./manifest.json" crossorigin="use-credentials" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
     <link rel="stylesheet" href="style.css">
     <style type="text/css" media="print">
-        .no-print { display: none; }
-     </style>
+        .no-print {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -23,7 +25,8 @@
             <ion-toolbar>
                 <img src="./brand.png" alt="" width="200px">
             </ion-toolbar>
-            <ion-icon name="cart-outline" size="large" class="ion-cart" id="openCart" onclick="openListCart()"></ion-icon>
+            <ion-icon name="cart-outline" size="large" class="ion-cart" id="openCart"
+                onclick="openListCart()"></ion-icon>
             <ion-badge color="primary" class="ion-badge-cart" id="badgeCart"></ion-badge>
         </ion-header>
         <div class="example-content">
@@ -36,7 +39,8 @@
             <ion-header>
                 <ion-toolbar>
                     <ion-buttons slot="end">
-                        <ion-button onclick="closeCart()"><ion-icon  color="light" name="close-sharp"></ion-icon></ion-button>
+                        <ion-button onclick="closeCart()"><ion-icon color="light"
+                                name="close-sharp"></ion-icon></ion-button>
                     </ion-buttons>
                     <ion-title class="ion-text-center">Add To Cart</ion-title>
                 </ion-toolbar>
@@ -45,15 +49,15 @@
                 <h4 id="pluname"></h4>
                 <div id="price"></div>
                 <div class="counter__section">
-                    <ion-button id="decrement"  onclick="decrement()">
-                        <ion-icon name="remove-outline"  color="light" ></ion-icon>
+                    <ion-button id="decrement" onclick="decrement()">
+                        <ion-icon name="remove-outline" color="light"></ion-icon>
                     </ion-button>
                     <p id="counter">1</p>
                     <ion-button id="increment" onclick="increment()">
-                        <ion-icon name="add-outline"  color="light"></ion-icon>
+                        <ion-icon name="add-outline" color="light"></ion-icon>
                     </ion-button>
                 </div>
-                <ion-button  expand="block" onclick="addCart()" style="color:white;">
+                <ion-button expand="block" onclick="addCart()" style="color:white;">
                     <ion-icon name="cart-outline" color="light"></ion-icon> Add
                 </ion-button>
             </div>
@@ -63,56 +67,72 @@
             <ion-header class="no-print">
                 <ion-toolbar>
                     <ion-buttons slot="start">
-                        <ion-button onclick="closeCart()" ><ion-icon color="light" name="arrow-back-sharp"></ion-icon></ion-button>
+                        <ion-button onclick="closeCart()"><ion-icon color="light"
+                                name="arrow-back-sharp"></ion-icon></ion-button>
                     </ion-buttons>
                     <ion-title class="ion-text-center">Jennamart</ion-title>
                     <ion-buttons slot="end">
-                        <ion-button onclick="clearCart()" strong="true"><ion-icon color="light" name="trash-bin"></ion-icon></ion-button>
+                        <ion-button onclick="clearCart()" strong="true"><ion-icon color="light"
+                                name="trash-bin"></ion-icon></ion-button>
                     </ion-buttons>
                     <ion-buttons slot="end">
-                        <ion-button onclick="printCart()" strong="true"><ion-icon color="light" name="print-sharp"></ion-icon></ion-button>
+                        <ion-button onclick="printCart()" strong="true"><ion-icon color="light"
+                                name="print-sharp"></ion-icon></ion-button>
                     </ion-buttons>
                 </ion-toolbar>
             </ion-header>
             <ion-content class="ion-padding" id="printView">
                 <ion-list id="listCart"> </ion-list>
                 <ion-list id="grandTotal" style="font-weight: bold;"> </ion-list>
+                <div id="PrintInvoice" class="invoice-box">
+                    <div style="text-align: center; margin-bottom: 5px;">
+                        <img src="./brand.png" alt="">
+                        <div id="invoice"></div>
+                        <div id="buyer"></div>
+                    </div>
+                    <table cellpadding="0" cellspacing="0" style="width: 100%;line-height: inherit;text-align: left;">
+                        <thead>
+                            <tr class="heading">
+                                <td
+                                    style="padding: 5px;vertical-align: top;background: #eee;border-bottom: 1px solid #ddd;font-weight: bold;">
+                                    Barang
+                                </td>
+                                <td
+                                    style="padding: 5px;vertical-align: top;text-align: right;background: #eee;border-bottom: 1px solid #ddd;font-weight: bold;">
+                                    Qty
+                                </td>
+                                <td
+                                    style="padding: 5px;vertical-align: top;text-align: right;background: #eee;border-bottom: 1px solid #ddd;font-weight: bold;">
+                                    Harga
+                                </td>
+                            </tr>
+
+                        </thead>
+                        <tbody id="listViewPrint">
+                            
+                        </tbody>
+
+                        <tr class="total">
+                            <td style="padding: 5px;vertical-align: top; font-weight: bold;">Total</td>
+                            <td></td>
+                            <td style="padding: 5px;vertical-align: top;text-align: right;border-top: 2px solid #eee;font-weight: bold;"
+                                id="grandTotalPrint">
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </ion-content>
         </ion-modal>
     </div>
-    <!-- <div id="receipt-content" style="display: none;">
-        <table>
-          <tr>
-            <th>Item</th>
-            <th>Quantity</th>
-            <th>Price</th>
-          </tr>
-          <tr>
-            <td>Apple</td>
-            <td>2</td>
-            <td>$5.00</td>
-          </tr>
-        </table>
-      </div>
-      <button onclick="printReceipt()">Print Receipt</button> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js"></script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
     <script src="script.js"></script>
-    <!-- <script>
-function printReceipt() {
-  const receiptContent = document.getElementById("receipt-content");
-  const printWindow = window.open("", "Print Receipt", "width=800,height=600");
-  printWindow.document.write(receiptContent.innerHTML);
-  printWindow.document.close();
-  printWindow.focus();
-  printWindow.print();
-  printWindow.close();
-}
-    </script> -->
 </body>
 
 </html>
