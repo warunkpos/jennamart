@@ -65,7 +65,7 @@ const products = [
         "img": "https://img.lazcdn.com/g/p/beab657a2527c0247c23d0a196c155d1.jpg_960x960q80.jpg_.webp"
     }, {
         "id": 12,
-        "pluname": "Gula Curah",
+        "pluname": "Gula Curah 1Kg",
         "price": 15000,
         "img": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//91/MTA-31783203/gula_pasir_lokal_gula_pasir_curah_-1_kg-_full01_flhi8n85.jpg"
     }, {
@@ -90,7 +90,7 @@ const products = [
         "img": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/MTA-10643012/neo_coffee_neo_coffee_3in1_tiramisu_bag_10x20g_full01_c26nuc7b.jpeg"
     }, {
         "id": 17,
-        "pluname": "Kapal Api",
+        "pluname": "Kopi Kapal Api",
         "price": 15000,
         "img": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//96/MTA-37146651/kapal_api_kopi_kapal_api_special_mix_kemasan_sachet_per_1_renceng_-10_pcs_x_24g-_full01_et66olsf.jpg"
     }, {
@@ -115,12 +115,12 @@ const products = [
         "img": "https://down-id.img.susercontent.com/file/ac7079bbe4a50d187d77b1e86953c47d"
     }, {
         "id": 22,
-        "pluname": "Bimoli 1L",
+        "pluname": "Minyak Bimoli 1L",
         "price": 16500,
         "img": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/89/MTA-178402001/bimoli_bimoli-minyak-goreng-pouch-1-l_full01.jpg"
     }, {
         "id": 23,
-        "pluname": "Vipco 1L",
+        "pluname": "Minyak Vipco 1L",
         "price": 15500,
         "img": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/MTA-50615801/vipco_vipco_minyak_goreng_-1_l-_pouch-_full75_obauzwwa.jpeg"
     }, {
@@ -161,111 +161,133 @@ const products = [
     }, {
         "id": 31,
         "pluname": "Ekonomi 3pcs",
-        "price": 4000
+        "price": 4000,
+        "img": "https://img.lazcdn.com/g/p/c1149bc8bc0e953889a7a8f35d08d0bc.jpg_360x360q75.jpg_.webp"
     }, {
         "id": 32,
         "pluname": "Vixal 750ml",
-        "price": 14500
+        "price": 14500,
+        "img": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2022/7/22/7787e041-e864-464c-adcf-54bcd4d4d837.jpg"
     }, {
         "id": 33,
         "pluname": "Emeron 170ml",
-        "price": 12500
+        "price": 12500,
+        "img": "https://id-live-01.slatic.net/p/641ff4cb79b1426b68e8e55de43f0620.jpg"
     }, {
         "id": 34,
         "pluname": "Sunsilk 160ml",
-        "price": 19500
+        "price": 19500,
+        "img": "https://img.ws.mms.shopee.co.id/id-11134207-7qul9-lhzxtnk9m9lqf7"
     }, {
         "id": 35,
         "pluname": "Downy Renceng",
-        "price": 4500
+        "price": 4500,
+        "img": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2021/11/13/7324f5bd-e672-4525-a4f5-08a9980f30e3.jpg"
     }, {
         "id": 36,
         "pluname": "Molto Renceng",
-        "price": 4500
+        "price": 4500,
+        "img": "https://id-live-01.slatic.net/p/883c8c5baffebf9d8ea8e09a6cd7da67.jpg"
     }, {
         "id": 37,
         "pluname": "Bon Cabe",
-        "price": 9000
+        "price": 9000,
+        "img": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2022/6/4/eff458ba-e031-4fba-8908-455194dd5afe.jpg"
     }, {
         "id": 38,
         "pluname": "Vaseline 100ml",
-        "price": 14500
+        "price": 14500,
+        "img": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//103/MTA-3449578/vaseline_hand-body-vaseline-100ml-healthy-white-uv-lightening_full02.jpg"
     }, {
         "id": 39,
         "pluname": "Rexona Glowing",
-        "price": 11500
+        "price": 11500,
+        "img": "https://cdn.sanity.io/images/27438tds/rexona-global-production/dbf9c60b5d62656ae893700126d9689344aa5335-600x600.jpg"
     }, {
         "id": 40,
         "pluname": "SG Ciptadent 3pcs",
-        "price": 15000
+        "price": 15000,
+        "img": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//97/MTA-4498324/ciptadent_ciptadent_sikat_gigi_crystal_clean_soft_3pcs_full01_uuy6au8k.jpg"
     }, {
         "id": 41,
         "pluname": "Pantene Rencenng",
-        "price": 9500
+        "price": 9500,
+        "img": "https://images.tokopedia.net/img/cache/700/VqbcmM/2021/9/11/b43f2e3a-2d76-4856-9271-881df7bad9c0.jpg"
     }, {
         "id": 42,
         "pluname": "Rexona Dreamy",
-        "price": 11500
+        "price": 11500,
+        "img": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2022/8/9/993fa0a6-efc0-4b1e-99b5-a13579cd7c85.jpg"
     }, {
         "id": 43,
         "pluname": "Sabun Fres 400ml",
-        "price": 11500
+        "price": 11500,
+        "img": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//catalog-image/101/MTA-132957551/fres_-_natural_fres_-_natural_body_wash_400_ml_full01_f46006e7.jpg"
     }, {
         "id": 44,
         "pluname": "Sandal Swallow",
-        "price": 10500
+        "price": 10500,
+        "img": "https://images.tokopedia.net/img/cache/700/product-1/2019/6/16/1543072/1543072_209c3473-cfe0-4b6a-a7bd-d0e5e101cd87_700_700.jpg"
     }, {
         "id": 45,
         "pluname": "Hanger",
-        "price": 8000
+        "price": 8000,
+        "img": "https://img.lazcdn.com/g/p/2561e1abb7a57b6b8d8844296e0b41ab.jpg_720x720q80.jpg"
     }, {
         "id": 46,
         "pluname": "Sedaap Goreng",
-        "price": 3000
+        "price": 3000,
+        "img": "https://down-id.img.susercontent.com/file/af0e40536a9353d6aabb4308ed4ad35c"
     }, {
         "id": 47,
         "pluname": "Lervia Cair 400ml",
-        "price": 15000
+        "price": 15000,
+        "img": "https://down-id.img.susercontent.com/file/fbefae562d4071d7eeedbb4454b8b184"
     }, {
         "id": 48,
         "pluname": "Posh 50ml",
-        "price": 11000
+        "price": 11000,
+        "img": "https://images.tokopedia.net/img/cache/700/VqbcmM/2022/12/27/589a70b1-f5e1-4b8a-bfd6-354dcdf55f21.jpg"
     }, {
         "id": 49,
         "pluname": "Lervia Lotion 200ml",
-        "price": 11000
+        "price": 11000,
+        "img": "https://img.ws.mms.shopee.co.id/7f7d3645bfd79188fd4d0ce615897b95"
     }, {
         "id": 50,
         "pluname": "Pantene 110ml",
-        "price": 17000
+        "price": 17000,
+        "img": "https://down-id.img.susercontent.com/file/id-11134207-7r98r-lxkidg50oo181a"
     }, {
         "id": 51,
         "pluname": "Sunsilk 160ml",
-        "price": 19500
+        "price": 19500,
+        "img": "https://img.ws.mms.shopee.co.id/id-11134207-7qul9-lhzxtnk9m9lqf7"
     }, {
         "id": 52,
         "pluname": "Pepsodent 225gram",
-        "price": 10000
+        "price": 10000,
+        "img": "https://assets.klikindomaret.com/products/20047217/20047217_1.webp"
     }, {
         "id": 53,
         "pluname": "Mama Lemon 950ml",
-        "price": 13000
+        "price": 13000,
+        "img": "https://assets.klikindomaret.com/products/20131788/20131788_1.webp"
     }, {
         "id": 54,
         "pluname": "Soklin 800g",
-        "price": 16500
-    }, {
+        "price": 16500,
+        "img": "https://assets.klikindomaret.com/products/10030924/10030924_1.webp"
+    } , {
         "id": 55,
-        "pluname": "Soklin 800g",
-        "price": 16500
+        "pluname": "Pepsodent 2x225g",
+        "price": 19500,
+        "img": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/MTA-35677849/pepsodent_pepsodent_toothpaste_white_prm_-2x225_gr-_full02_zrb8jyo.jpeg"
     }, {
         "id": 56,
-        "pluname": "Pepsodent 2x225g",
-        "price": 19500
-    }, {
-        "id": 57,
         "pluname": "Santan Kara",
-        "price": 3000
+        "price": 3000,
+        "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
     },
 ]
 
@@ -274,8 +296,7 @@ function appendListProducts(data) {
         var dataHtml = `
         <ion-col class="ion-no-padding"  size-sm="6">
             <ion-card class="custom-card">
-                <img alt="`+ data[i].pluname + `"
-                    src="`+ data[i].img + `" />
+                <img alt="`+ data[i].pluname + `" src="`+ data[i].img + `" />
                 <ion-card-header>
                     <ion-card-subtitle> Rp. `+ Number(data[i].price).toLocaleString('id-ID') + `</ion-card-subtitle>
                     <ion-card-title>`+ data[i].pluname + `</ion-card-title>
@@ -283,10 +304,14 @@ function appendListProducts(data) {
                 <ion-button expand="block" class="ion-btn-card ion-no-padding" onclick="addToCart(`+ data[i].id + `)">Add</ion-button>
             </ion-card>
         </ion-col> `;
-        $('#listProducts').append(dataHtml)
+        $('#listProducts').append(dataHtml);
     }
 }
-appendListProducts(products);
+// A $( document ).ready() block.
+$( document ).ready(function() {
+    console.log( "ready!" );
+    appendListProducts(products);
+});
 
 const modal = document.getElementById('openQty');
 let dataProduct = ''
@@ -440,6 +465,5 @@ function removeListById(id) {
     }
 }
 
-console.log(moment());
 const invoice = moment().format('hh/mm/DD/MM/YYYY')
 $('#invoice').html('JM'+invoice);
