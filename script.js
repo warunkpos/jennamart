@@ -288,7 +288,12 @@ const products = [
         "pluname": "Santan Kara",
         "price": 3000,
         "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
-    },
+    }, {
+        "id": 57,
+        "pluname": "Cleantex",
+        "price": 13500,
+        "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
+    }, 
 ]
 
 function appendListProducts(data) {
