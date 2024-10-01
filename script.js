@@ -201,7 +201,7 @@ const products = [
     }, {
         "id": 39,
         "pluname": "Rexona Glowing",
-        "price": 11500,
+        "price": 13000,
         "img": "https://cdn.sanity.io/images/27438tds/rexona-global-production/dbf9c60b5d62656ae893700126d9689344aa5335-600x600.jpg"
     }, {
         "id": 40,
@@ -216,7 +216,7 @@ const products = [
     }, {
         "id": 42,
         "pluname": "Rexona Dreamy",
-        "price": 11500,
+        "price": 13000,
         "img": "https://images.tokopedia.net/img/cache/500-square/VqbcmM/2022/8/9/993fa0a6-efc0-4b1e-99b5-a13579cd7c85.jpg"
     }, {
         "id": 43,
@@ -386,7 +386,7 @@ function printCart() {
     $('#listCart').hide();
     $('#grandTotal').hide();
     $('#PrintInvoice').show();
-    window.print();
+
 }
 
 function clearCart() {
