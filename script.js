@@ -301,7 +301,7 @@ const products = [
     }, {
         "id": 59,
         "pluname": "Kapal api renceng 6gr",
-        "price": 8000
+        "price": 8000,
         "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
     }, {
         "id": 60,
