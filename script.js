@@ -298,7 +298,37 @@ const products = [
         "pluname": "Sunlight 370ml",
         "price": 7500,
         "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
-    }, 
+    }, {
+        "id": 59,
+        "pluname": "Kapal api renceng 6gr",
+        "price": 8000
+        "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
+    }, {
+        "id": 60,
+        "pluname": "Kecap Sawi 175ml",
+        "price": 4000,
+        "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
+    },{
+        "id": 61,
+        "pluname": "Kecap Sedaap",
+        "price": 1500,
+        "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
+    },{
+        "id": 62,
+        "pluname": "Kecap Indofood",
+        "price": 1500,
+        "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
+    },{
+        "id": 63,
+        "pluname": "Kecap Bango",
+        "price": 750,
+        "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
+    },{
+        "id": 64,
+        "pluname": "Sunlight 370ml",
+        "price": 7500,
+        "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
+    },
 ]
 
 function appendListProducts(data) {
@@ -317,10 +347,11 @@ function appendListProducts(data) {
         $('#listProducts').append(dataHtml);
     }
 }
+appendListProducts(products);
 // A $( document ).ready() block.
 $( document ).ready(function() {
     console.log( "ready!" );
-    appendListProducts(products);
+    
 });
 
 const modal = document.getElementById('openQty');
