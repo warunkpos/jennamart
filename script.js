@@ -325,8 +325,23 @@ const products = [
         "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
     },{
         "id": 64,
-        "pluname": "Sunlight 370ml",
-        "price": 7500,
+        "pluname": "Freshcare hot",
+        "price": 12500,
+        "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
+    },{
+        "id": 65,
+        "pluname": "S. lifebuoy renceng",
+        "price": 4500,
+        "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
+    },{
+        "id": 66,
+        "pluname": "S. lifebuoy ecer",
+        "price": 1000,
+        "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
+    }, {
+        "id": 67,
+        "pluname": "Masker Wajah",
+        "price": 7000,
         "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
     },
 ]
