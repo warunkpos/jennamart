@@ -292,57 +292,57 @@ const products = [
         "id": 57,
         "pluname": "Cleantex",
         "price": 13500,
-        "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
+        "img": "https://down-id.img.susercontent.com/file/15a01c90eafe6807c300bcfd160a019f"
     }, {
         "id": 58,
         "pluname": "Sunlight 370ml",
         "price": 7500,
-        "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
+        "img": "https://images.tokopedia.net/img/cache/700/VqbcmM/2022/7/8/d9faf0f8-d7bf-4430-97d0-65e4c01213aa.jpg"
     }, {
         "id": 59,
         "pluname": "Kapal api renceng 6gr",
         "price": 8000,
-        "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
+        "img": "https://down-id.img.susercontent.com/file/id-11134207-7r98o-lkp42ablapzp6e"
     }, {
         "id": 60,
         "pluname": "Kecap Sawi 175ml",
         "price": 4000,
-        "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
+        "img": "https://filebroker-cdn.lazada.co.id/kf/S33a5876e712149f897df52d0dac3adf5X.jpg"
     },{
         "id": 61,
         "pluname": "Kecap Sedaap",
         "price": 1500,
-        "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
+        "img": "https://images.tokopedia.net/img/cache/700/hDjmkQ/2024/7/14/6a2d0f58-6600-4f9e-816c-1b585c5d85e3.jpg"
     },{
         "id": 62,
         "pluname": "Kecap Indofood",
         "price": 1500,
-        "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
+        "img": "https://images.tokopedia.net/img/cache/700/VqbcmM/2023/2/21/8f7170d3-b5a9-4662-bdd9-d41b502716f9.png"
     },{
         "id": 63,
         "pluname": "Kecap Bango",
         "price": 750,
-        "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
+        "img": "https://down-id.img.susercontent.com/file/id-11134207-7qul2-lhmqlctmucbr64"
     },{
         "id": 64,
         "pluname": "Freshcare hot",
         "price": 12500,
-        "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
+        "img": "https://d2qjkwm11akmwu.cloudfront.net/products/351075_7-4-2021_10-6-33-1665780346.webp"
     },{
         "id": 65,
         "pluname": "S. lifebuoy renceng",
         "price": 4500,
-        "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
+        "img": "https://down-id.img.susercontent.com/file/id-11134207-7r98z-lnqqjua1ej4r74"
     },{
         "id": 66,
         "pluname": "S. lifebuoy ecer",
         "price": 1000,
-        "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
+        "img": "https://images.tokopedia.net/img/cache/700/VqbcmM/2022/7/26/e95d8220-cd7f-4b58-ae5a-6924ba264945.jpg"
     }, {
         "id": 67,
         "pluname": "Masker Wajah",
         "price": 7000,
-        "img": "https://assets.klikindomaret.com/products/10022118/10022118_1.webp"
+        "img": "https://down-id.img.susercontent.com/file/4c5a68904e5d5e1f46bc70b1ee9946b5"
     },
 ]
 
