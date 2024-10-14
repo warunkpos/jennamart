@@ -431,16 +431,14 @@ var modalCart = document.getElementById('modalCart');
 
 function closeCart() {
     console.log('close');
-    $('#listCart').show();
-    $('#grandTotal').show();
+    $('#printView').show();
     $('#PrintInvoice').hide();
     modalCart.dismiss();
     modal.isOpen = false;
 }
 
 function printCart() {
-    $('#listCart').hide();
-    $('#grandTotal').hide();
+    $('#printView').hide();
     $('#PrintInvoice').show();
 
 }
@@ -451,12 +449,14 @@ function clearCart() {
     $('#listCart').html('');
     $('#grandTotal').html('');
     $('#grandTotalPrint').html('');
+    $('#nameBuyer').html('');
     $('#listViewPrint').html(''); 
 }
 
 function openListCart() {
     $('#listCart').html('');
     $('#grandTotal').html('');
+    $('#nameBuyer').html('');
     $('#grandTotalPrint').html('');
     $('#listViewPrint').html('');
     appendListCart(cartitem);
@@ -515,6 +515,7 @@ function removeListById(id) {
         localStorage.setItem('cart', JSON.stringify(cartitem));
         $('#listCart').html('');
         $('#grandTotal').html('');
+        $('#nameBuyer').html('');
         $('#grandTotalPrint').html('');
         $('#listViewPrint').html('');
         appendListCart(cartitem);
@@ -523,3 +524,7 @@ function removeListById(id) {
 
 const invoice = moment().format('hh/mm/DD/MM/YYYY')
 $('#invoice').html('JM'+invoice);
+
+function nameBuyer(val) {
+    $('#buyer').html(val)
+}

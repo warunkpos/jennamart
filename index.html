@@ -81,9 +81,12 @@
                     </ion-buttons>
                 </ion-toolbar>
             </ion-header>
-            <ion-content class="ion-padding" id="printView">
-                <ion-list id="listCart"> </ion-list>
-                <ion-list id="grandTotal" style="font-weight: bold;"> </ion-list>
+            <ion-content class="ion-padding" >
+                <div id="printView">
+                    <ion-input label="Nama" placeholder="Nama Pembeli" id="nameBuyer" onchange="nameBuyer(this.value)"></ion-input>
+                    <ion-list id="listCart"> </ion-list>
+                    <ion-list id="grandTotal" style="font-weight: bold;"> </ion-list>
+                </div>
                 <div id="PrintInvoice" class="invoice-box">
                     <div style="text-align: center; margin-bottom: 5px;">
                         <img src="./brand.png" alt="">
