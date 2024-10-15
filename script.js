@@ -456,7 +456,7 @@ function clearCart() {
 function openListCart() {
     $('#listCart').html('');
     $('#grandTotal').html('');
-    $('#buyer').html('');
+    $('#inputNameBuyer').html('');
     $('#grandTotalPrint').html('');
     $('#listViewPrint').html('');
     appendListCart(cartitem);
