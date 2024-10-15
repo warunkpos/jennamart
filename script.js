@@ -456,7 +456,7 @@ function clearCart() {
 function openListCart() {
     $('#listCart').html('');
     $('#grandTotal').html('');
-    $('#nameBuyer').html('');
+    $('#buyer').html('');
     $('#grandTotalPrint').html('');
     $('#listViewPrint').html('');
     appendListCart(cartitem);
@@ -515,7 +515,6 @@ function removeListById(id) {
         localStorage.setItem('cart', JSON.stringify(cartitem));
         $('#listCart').html('');
         $('#grandTotal').html('');
-        $('#nameBuyer').html('');
         $('#grandTotalPrint').html('');
         $('#listViewPrint').html('');
         appendListCart(cartitem);
