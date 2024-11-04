@@ -350,12 +350,12 @@ const products = [
         "img": "https://down-id.img.susercontent.com/file/id-11134207-7r98v-ly3dzrcb8dfia5_tn"
     }, {
         "id": 69,
-        "pluname": "Ketas Minyak 100",
+        "pluname": "Kertas Minyak 100",
         "price": 9500,
         "img": "https://filebroker-cdn.lazada.co.id/kf/S927104d74e1145938ee7ca9da7a5969aE.jpg"
     }, {
         "id": 70,
-        "pluname": "Ketas Minyak 200",
+        "pluname": "Kertas Minyak 200",
         "price": 18500,
         "img": "https://filebroker-cdn.lazada.co.id/kf/S927104d74e1145938ee7ca9da7a5969aE.jpg"
     },
