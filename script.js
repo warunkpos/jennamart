@@ -358,6 +358,21 @@ const products = [
         "pluname": "Kertas Minyak 200",
         "price": 18500,
         "img": "https://filebroker-cdn.lazada.co.id/kf/S927104d74e1145938ee7ca9da7a5969aE.jpg"
+    }, {
+        "id": 71,
+        "pluname": "Makuku M28",
+        "price": 46000,
+        "img": "https://id-test-11.slatic.net/p/3fe70076a1072de329a05bd5be5d8aeb.jpg"
+    }, {
+        "id": 70,
+        "pluname": "Makuku L26",
+        "price": 48000,
+        "img": "https://down-id.img.susercontent.com/file/sg-11134201-7qvdp-li9of2j2q9nwd6"
+    }, {
+        "id": 71,
+        "pluname": "Sweety L28",
+        "price": 43000,
+        "img": "https://arti-assets.sgp1.digitaloceanspaces.com/renyswalayanku/products/b889a335-b9d0-486e-9f14-389aa5f625b5.jpg"
     },
 ]
 
